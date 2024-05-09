@@ -1,77 +1,79 @@
-*{
-    margin: 0;
-    padding: 0;                         /*zerar*/
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0; /*zerar*/
+  box-sizing: border-box;
 }
 
-
 body {
-    background: #9B0A0A; /*Colocar imagem de fundo*/
-    background-size: cover; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
+  background: #9b0a0a; /*Colocar imagem de fundo*/
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .logo-red {
-    margin: 0px 0px 25px;
-    display: flex;
-    height: 750px;
+  margin: 0px 0px 25px;
+  display: flex;
+  height: 750px;
+}
+
+.logo-black {
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-    padding: 50px;
-    background-color: #000000;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+  padding: 50px;
+  background-color: #000000;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .buttons {
-    margin: 90px 0;
-    display: flex ;
-    gap: 100px;
+  margin: 90px 0;
+  display: flex;
+  gap: 100px;
 }
 
 button {
-    padding: 30px;
-    font-size: 90px;
-    cursor: pointer ;
-    border: none;
-    border-radius: 30px;
-    transition: opacity 0.5s ease-in-out; /*Trasição de opacidade nos botões*/
+  padding: 30px;
+  font-size: 90px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  transition: opacity 0.5s ease-in-out; /*Trasição de opacidade nos botões*/
 }
 
-button:hover {          /*Opacidade nos botões*/
-    opacity: 0.7;  
+button:hover {
+  /*Opacidade nos botões*/
+  opacity: 0.7;
 }
 
 #rock {
-    
-    background-color: #380655;
+  background-color: #380655;
 }
 
 #paper {
-    background-color: #5b8800;
+  background-color: #5b8800;
 }
 
 #scissors {
-    background-color: #015c9c;
+  background-color: #015c9c;
 }
 
-p  {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-size: 65px;
+p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 65px;
 }
-
-
 
 /*Aplicações textos--------------------------------------*/
 
@@ -80,14 +82,91 @@ p  {
     color: #ffffff;
 }
 */
-.your-score span {               /*Acesso para modificar o span*/
-    color: rgb(136, 180, 255);
+.your-score span {
+  /*Acesso para modificar o span*/
+  color: rgb(136, 180, 255);
 }
-.your-score, .machine-score {
-    font-size: 50px;
-    color: #ffffff;
+.your-score,
+.machine-score {
+  font-size: 50px;
+  color: #ffffff;
 }
 
-.machine-score span {               /*Acesso para modificar o span*/
-    color: rgb(224, 71, 15);
+.machine-score span {
+  /*Acesso para modificar o span*/
+  color: rgb(224, 71, 15);
+}
+
+/*Responsividade - MOBILE--------------------------------------*/
+
+@media screen and (max-width: 2240px) {
+  /*NÃO ESQUECER - ALTERAR MAX-WIDTH PARA 900PX*/
+
+  body {
+    background: #000000; /*Colocar imagem de fundo*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .logo-red {
+    /*APRENDER COMO EXCLUIR UMA IMAGEM NO MODO RESPONCIVIDADE*/
+    position: fixed;
+    height: 0;
+    width: 0;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .logo-black {
+
+    display: block;
+    height: 500px;
+    width: 500px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 35px;
+  }
+  
+  .your-score,
+.machine-score {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+  .container {
+    margin: 5px;
+    padding: 5px;
+    background-color: #b90c32d3;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    padding: 7px;
+    font-size: 70px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: opacity 0.5s ease-in-out; /*Trasição de opacidade nos botões*/
+  }
+  .buttons {
+    margin: 10px 10px;
+    padding: 0, 5px;
+    gap: 20px;
+  }
 }
